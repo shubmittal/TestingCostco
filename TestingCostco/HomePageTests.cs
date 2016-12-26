@@ -58,7 +58,7 @@ namespace TestingCostco
           
         }
         [TestMethod]
-        public void VerifyUserCanGotoPAhrmacyPage()
+        public void VerifyUserCanGotoPharmacyPage()
         {
             homepage.GotoPharmacyPage().VerifyUserIsAt();
         }
