@@ -1,0 +1,15 @@
+c:\users\shubhra\documents\visual studio 2017\Projects\TestingCostco\TestingCostco\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+c:\users\shubhra\documents\visual studio 2017\Projects\TestingCostco\TestingCostco\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+c:\users\shubhra\documents\visual studio 2017\Projects\TestingCostco\TestingCostco\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+c:\users\shubhra\documents\visual studio 2017\Projects\TestingCostco\TestingCostco\bin\Debug\TestingCostco.dll
+c:\users\shubhra\documents\visual studio 2017\Projects\TestingCostco\TestingCostco\bin\Debug\TestingCostco.pdb
+c:\users\shubhra\documents\visual studio 2017\Projects\TestingCostco\TestingCostco\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+c:\users\shubhra\documents\visual studio 2017\Projects\TestingCostco\TestingCostco\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+c:\users\shubhra\documents\visual studio 2017\Projects\TestingCostco\TestingCostco\bin\Debug\WebDriver.dll
+c:\users\shubhra\documents\visual studio 2017\Projects\TestingCostco\TestingCostco\bin\Debug\WebDriver.xml
+c:\users\shubhra\documents\visual studio 2017\Projects\TestingCostco\TestingCostco\obj\Debug\TestingCostco.csprojResolveAssemblyReference.cache
+c:\users\shubhra\documents\visual studio 2017\Projects\TestingCostco\TestingCostco\obj\Debug\TestingCostco.dll
+c:\users\shubhra\documents\visual studio 2017\Projects\TestingCostco\TestingCostco\obj\Debug\TestingCostco.pdb
+c:\users\shubhra\documents\visual studio 2017\Projects\TestingCostco\TestingCostco\bin\Debug\wires-0.6.0-win.exe
+c:\users\shubhra\documents\visual studio 2017\Projects\TestingCostco\TestingCostco\bin\Debug\WebDriver.Support.dll
+c:\users\shubhra\documents\visual studio 2017\Projects\TestingCostco\TestingCostco\bin\Debug\WebDriver.Support.xml
