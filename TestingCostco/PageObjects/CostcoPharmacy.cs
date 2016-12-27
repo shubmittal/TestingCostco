@@ -63,16 +63,28 @@ namespace TestingCostco.PageObjects
                 (driver) =>
 
                 {
-                    (driver.FindElement(search_noresults) || driver.FindElement(search_results)) ? return true : return false;
+                    bool result;
+                    result = ((driver.FindElement(search_noresults) != null) || (driver.FindElement(search_results) != null)) ?  true :  false;
+
+                    return result;
                 }
 
                 );
 
             //Check if results were obatined
 
-           // var results = 
+            // var results = 
+            var resultsfound  = driver.FindElement(search_noresults).GetAttribute("style").Contains("none");
 
-            
+            if (resultsfound)
+            {
+                //select results per page
+
+            }
+
+
+
+
 
         }
     }

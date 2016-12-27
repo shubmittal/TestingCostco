@@ -18,7 +18,7 @@ namespace TestingCostco.Utilities
         public  static IWebDriver LanchApp()
         {
            
-            Browser browser = Constants.browser;
+            Browser browser = Config.browser;
 
             switch (browser)
             {
@@ -34,7 +34,7 @@ namespace TestingCostco.Utilities
                     break;               
             }
 
-            driver.Url = Constants.aut;
+            driver.Url = Config.aut;
 
             driver.Navigate();
 
@@ -48,6 +48,33 @@ namespace TestingCostco.Utilities
         public static void CloseApp()
         {
             driver.Quit();
+        }
+
+
+        public static void GotoPage(this IWebDriver driver, string webpagename)
+        {
+
+            string relativeurl ="";
+
+            switch (webpagename)
+            {
+
+               
+
+                case ("Pharmacy"):
+                    relativeurl = "/Pharmacy";
+            break;
+
+
+                default:
+                            break;
+            }
+
+            String aut = Config.aut;
+
+            driver.Navigate().GoToUrl(aut + relativeurl);
+
+
         }
 
 

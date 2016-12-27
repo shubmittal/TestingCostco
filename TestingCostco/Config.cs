@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TestingCostco
 {
-    public static class Constants
+    public static class Config
     {
         public static string aut = "http://www.costco.com";
         public static Browser browser = Browser.Chrome;
