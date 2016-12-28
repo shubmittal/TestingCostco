@@ -20,7 +20,7 @@ namespace TestingCostco.PageObjects
         By search_searchicon = By.XPath("//*[@class = 'ui-icon ui-icon-search']");
         By search_searchresults = By.XPath("//*[@id = 'drugResults']");
         By search_noresults = By.XPath("//*[contains(@id ,'drugNoResults')]");
-        By search_resultsperpage = By.XPath("//*[@id = 'drugResults']//*[@id = 'pagination-header']//li[@class = 'item_link' and text() = '96']");
+        By search_resultsperpage = By.XPath("//*[@id = 'drugResults']//*[@id = 'pagination-header']//li[@class = 'item_link' and contains (text(),'96')]");
         By search_paginationsummary = By.XPath("//*[@id = 'pagination - summary']");
         By search_results = By.XPath("//*[@id = 'pagination-body']//*[@class = 'drug-directory-results']/a");
 
@@ -48,9 +48,12 @@ namespace TestingCostco.PageObjects
 
         }
 
-        public void SeachforMedicine(string searchterm)
+        public Dictionary<string, string> SeachforMedicine(string searchterm)
         {
             // Click on the searchbox and enter search term
+
+            string seetsearchesperpage = "48";
+            var results = new Dictionary<string, string>();
 
             driver.FindElement(Search_searchbox).Click();
             driver.FindElement(Search_searchbox).SendKeys(searchterm);
@@ -58,30 +61,42 @@ namespace TestingCostco.PageObjects
 
             //  wait.Until(ExpectedConditions.ElementIsVisible(search_searchresults) || ExpectedConditions.ElementIsVisible(search_noresults));
 
-            wait.Until(
-
-                (driver) =>
+            wait.Until((driver) =>
 
                 {
-                    bool result;
-                    result = ((driver.FindElement(search_noresults) != null) || (driver.FindElement(search_results) != null)) ?  true :  false;
-
-                    return result;
-                }
-
-                );
+                    return ((driver.FindElement(search_noresults) != null) || (driver.FindElement(search_results) != null)) ? true : false;
+                });
 
             //Check if results were obatined
 
             // var results = 
-            var resultsfound  = driver.FindElement(search_noresults).GetAttribute("style").Contains("none");
+            var resultsfound = driver.FindElement(search_noresults).GetAttribute("style").Contains("none");
 
             if (resultsfound)
             {
-                //select results per page
+                results.Add("Result Summary", "Results found");
+                driver.FindElement(search_resultsperpage).Click();
+
+                var searchresults = driver.FindElements(search_results);
+
+
+                foreach (var item in searchresults)
+                {
+                    results.Add(item.Text, item.GetAttribute("href"));
+                }
+
+
+
+            }
+            else
+            {
+                results.Add("Result Summary", "No results found");
 
             }
 
+            return results;
+
+            
 
 
 
